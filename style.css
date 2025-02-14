@@ -1,7 +1,8 @@
+/* Global body styles */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url('images/background-main-image.png');
+    background-image: url('images/background-for-riku.png');  /* Change image path if needed */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -11,51 +12,48 @@ body {
     height: 100vh;
 }
 
-.container {
-    margin: 50px auto;
-    padding: 20px;
-    border: 2px solid #dcdcdc;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.8);
-    clip-path: polygon(50% 0%, 65% 10%, 80% 25%, 85% 50%, 80% 75%, 65% 90%, 50% 100%, 35% 90%, 20% 75%, 15% 50%, 20% 25%, 35% 10%);
-    transition: clip-path 0.5s ease;
-}
-
+/* Fade-in animation for the title */
 .title {
-    font-size: 24px;
-    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
 }
 
-.show-button {
-    padding: 10px 20px;
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Style for the audio player */
+audio {
+    margin-top: 20px;
+    width: 70%;
     border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-    position: relative;
-    z-index: 1;
+    outline: none;
+    transition: transform 0.3s ease-in-out;
 }
 
-.show-button.yushi {
-    background-color: #4D9BFF;
+/* Hover effect for audio player */
+audio:hover {
+    transform: scale(1.05);
 }
 
-.show-button.riku {
-    background-color: #FF4D4D;
-}
-
-.show-button:hover {
-    background-color: #e43e3e;
-}
-
-.show-button.yushi:hover {
+/* Style for the back button */
+.back-button {
     background-color: #0077ff;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
-.show-button.riku:hover {
-    background-color: #e43e3e;
+/* Hover effect for back button */
+.back-button:hover {
+    background-color: #005bb5;
 }

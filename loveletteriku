@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>When life get's you, I get you. A love letter from my dearest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f3f3;
+            color: #333;
+        }
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid #dcdcdc;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            background-color: #fff;
+        }
+        .title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .letter {
+            font-size: 18px;
+            margin-bottom: 30px;
+            display: none; /* Hidden initially */
+        }
+        audio {
+            margin-top: 20px;
+        }
+        .show-button {
+            padding: 10px 20px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .show-button:hover {
+            background-color: #e43e3e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <p>Happy valentine's day my love.</p>
+        </div>
+        <button class="show-button" onclick="showLetter()">Open this</button>
+        <div class="letter" id="letter">
+            <p>Dear,love</p>
+            <p>I hope this letter finds you in great spirits. I just wanted to remind you how much you mean to me. The time we’ve spent together has been nothing short of magical, and I’m so grateful for all the moments we share.</p>
+            <p>Sending you all my love today and always. Happy Valentine’s Day!</p>
+            <p>With all my heart,</p>
+            <p>[My name]</p>
+            <audio controls>
+                <source src="your-music-file.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        function showLetter() {
+            document.getElementById("letter").style.display = "block"; // Show letter
+        }
+    </script>
+</body>
+</html>

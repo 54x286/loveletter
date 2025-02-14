@@ -27,52 +27,49 @@ body {
 }
 
 .show-button {
-    padding: 20px 30px;
+    padding: 10px 20px;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin: 10px;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-    position: relative;
-}
-
-.heart-shape {
-    width: 250px;
-    height: 250px;
-    display: inline-block;
-    text-align: center;
-    font-size: 18px;
-    line-height: 220px;
-    background-color: red;
     position: relative;
     overflow: hidden;
+    display: inline-block;
+    text-align: center;
 }
 
-.heart-shape::before, .heart-shape::after {
-    content: "";
+.show-button::before {
+    content: '';
     position: absolute;
-    width: 200px;
-    height: 200px;
-    background-color: red;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #ff4d4d;
     border-radius: 50%;
-    top: 0;
+    transition: all 0.4s ease;
+    z-index: -1;
+    transform: translate(-50%, -50%);
 }
 
-.heart-shape::before {
-    left: 0;
-    transform: rotate(-45deg);
-    transform-origin: 100% 100%;
+.show-button:hover::before {
+    width: 0;
+    height: 0;
 }
 
-.heart-shape::after {
-    right: 0;
-    transform: rotate(45deg);
-    transform-origin: 0 100%;
+.show-button.yushi {
+    background-color: #4D9BFF;
 }
 
-.show-button:hover {
-    background-color: darkred;
+.show-button.riku {
+    background-color: #ff4d4d;
+}
+
+.show-button.yushi:hover {
+    background-color: #0077ff;
+}
+
+.show-button.riku:hover {
+    background-color: #e43e3e;
 }

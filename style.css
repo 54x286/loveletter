@@ -1,0 +1,15 @@
+.show-button.riku {
+  background-color: red; /* For Riku */
+}
+
+.show-button.yushi {
+  background-color: blue; /* For Yushi */
+}
+
+.show-button.riku:hover {
+  background-color: darkred;
+}
+
+.show-button.yushi:hover {
+  background-color: darkblue;
+}

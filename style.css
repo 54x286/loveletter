@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url('images/background-for-riku.png');  /* Change image path if needed */
+    background-image: url('images/background-main-image.png');  /* Adjust the path as needed */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -25,6 +25,13 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+/* Style for the letter content */
+.letter-content {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 /* Style for the audio player */

@@ -1,8 +1,7 @@
-/* Global body styles */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url('images/background-main-image.png');  /* Adjust the path as needed */
+    background-image: url('images/background-main-image.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -12,55 +11,50 @@ body {
     height: 100vh;
 }
 
-/* Fade-in animation for the title */
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #dcdcdc;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+}
+
 .title {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Style for the letter content */
-.letter-content {
-    margin-top: 30px;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* Style for the audio player */
-audio {
-    margin-top: 20px;
-    width: 70%;
-    border-radius: 5px;
-    outline: none;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Hover effect for audio player */
-audio:hover {
-    transform: scale(1.05);
-}
-
-/* Style for the back button */
-.back-button {
-    background-color: #0077ff;
+.show-button {
     padding: 10px 20px;
+    background-color: #ff4d4d;
     color: white;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    z-index: 1;
 }
 
-/* Hover effect for back button */
-.back-button:hover {
-    background-color: #005bb5;
+.show-button.yushi {
+    background-color: #4D9BFF;
+}
+
+.show-button.riku {
+    background-color: #FF4D4D;
+}
+
+.show-button:hover {
+    background-color: #e43e3e;
+}
+
+.show-button.yushi:hover {
+    background-color: #0077ff;
+}
+
+.show-button.riku:hover {
+    background-color: #e43e3e;
 }

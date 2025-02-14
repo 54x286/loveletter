@@ -1,10 +1,7 @@
+/* General Styles for All Pages */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url('images/background-main-image.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     color: #333;
     margin: 0;
     padding: 0;
@@ -19,7 +16,6 @@ body {
     width: 80%;
     max-width: 600px;
     background-color: rgba(255, 255, 255, 0.8);
-
 }
 
 .title {
@@ -37,6 +33,7 @@ body {
     margin: 10px;
     position: relative;
     z-index: 1;
+    transition: background-color 0.3s ease;
 }
 
 .show-button.yushi {
@@ -56,5 +53,45 @@ body {
 }
 
 .show-button.riku:hover {
-    background-color: #e43e3e;
+    background-color: #ff0033;
+}
+
+.back-button {
+    background-color: #0077ff;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: #005bb5;
+}
+
+/* Page Specific Background Images */
+
+/* Index Page (Choose Love Letter) */
+body.index-page {
+    background-image: url('images/background-main-image.png'); /* Background for homepage */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Yushi to Riku Page */
+body.yushi-to-riku {
+    background-image: url('images/yushi_to_riku.png'); /* Background for Yushi to Riku page */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Riku to Yushi Page */
+body.riku-to-yushi {
+    background-image: url('images/riku_to_yushi.png'); /* Background for Riku to Yushi page */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }

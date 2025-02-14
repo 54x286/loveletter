@@ -1,15 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('images/background-main-image.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #dcdcdc;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.show-button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
 .show-button.riku {
-  background-color: red; /* For Riku */
+    background-color: red; /* Riku's button color */
 }
 
 .show-button.yushi {
-  background-color: blue; /* For Yushi */
+    background-color: blue; /* Yushi's button color */
 }
 
 .show-button.riku:hover {
-  background-color: darkred;
+    background-color: darkred;
 }
 
 .show-button.yushi:hover {
-  background-color: darkblue;
+    background-color: darkblue;
 }

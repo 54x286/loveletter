@@ -1,23 +1,8 @@
-/* Resetting default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Background styling */
-body {
-    font-family: Arial, sans-serif;
-    background: url('images/background-main-image.png') no-repeat center center/cover;
-    height: 100vh;
-    color: white;
-    text-align: center;
-}
-
 /* Container for the content */
 .container {
     position: relative;
     top: 20%;
+    text-align: left; /* This will align content to the left */
 }
 
 /* Envelope container */
@@ -27,17 +12,19 @@ body {
     margin: 20px;
 }
 
+/* The envelope image */
 .envelope {
     width: 200px;
     height: auto;
 }
 
+/* Buttons */
 .button-from-yushi,
 .button-from-riku {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: -50px; /* Move the button more to the left */
+    transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
@@ -56,6 +43,7 @@ body {
     background-color: #ff0033;
 }
 
+/* Hover effect for buttons */
 .button-from-yushi:hover,
 .button-from-riku:hover {
     background-color: #005bb5;

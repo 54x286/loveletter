@@ -1,97 +1,53 @@
-/* General Styles for All Pages */
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    color: #333;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('fromloves.png') no-repeat center center/cover;
     height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.envelope {
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
-    border: 2px solid #dcdcdc;
     border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.title {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.show-button {
-    padding: 10px 20px;
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    margin: 10px;
-    position: relative;
-    z-index: 1;
-    transition: background-color 0.3s ease;
 }
 
-.show-button.yushi {
-    background-color: #4D9BFF;
-}
-
-.show-button.riku {
-    background-color: #FF4D4D;
-}
-
-.show-button:hover {
-    background-color: #e43e3e;
-}
-
-.show-button.yushi:hover {
-    background-color: #0077ff;
-}
-
-.show-button.riku:hover {
-    background-color: #ff0033;
-}
-
-.back-button {
-    background-color: #0077ff;
-    padding: 10px 20px;
-    color: white;
+.from-yushi a {
+    color: blue;
+    font-size: 24px;
     text-decoration: none;
-    border-radius: 5px;
+}
+
+.from-riku a {
+    color: red;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
     margin-top: 20px;
-    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    display: none;
 }
 
-.back-button:hover {
-    background-color: #005bb5;
-}
-
-/* Page Specific Background Images */
-
-/* Index Page (Choose Love Letter) */
-body.index-page {
-    background-image: url('images/fromloves.png'); /* Background for homepage */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* Yushi to Riku Page */
-body.yushi-to-riku {
-    background-image: url('images/yushi_to_riku.png'); /* Background for Yushi to Riku page */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* Riku to Yushi Page */
-body.riku-to-yushi {
-    background-image: url('images/riku_to_yushi.png'); /* Background for Riku to Yushi page */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+#yushi:target, #riku:target {
+    display: block;
 }

@@ -1,51 +1,58 @@
+/* Resetting default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Background styling */
 body {
     font-family: Arial, sans-serif;
     background: url('fromloves.png') no-repeat center center/cover;
     height: 100vh;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.envelope {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.from-yushi a {
-    color: blue;
-    font-size: 24px;
-    text-decoration: none;
-}
-
-.from-riku a {
-    color: red;
-    font-size: 24px;
-    text-decoration: none;
-}
-
-.content {
     text-align: center;
+}
+
+/* Container for clickable areas */
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* The clickable areas will be positioned as image links */
+.clickable-area {
+    position: absolute;
+    display: block;
+    width: 150px; /* Adjust this width as needed */
+    height: 150px; /* Adjust this height as needed */
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* Positioning the areas for "From Yushi" and "From Riku" */
+#yushi {
+    top: 20%; /* Adjust the positioning */
+    left: 30%;
+    background-image: url('from-yushi-image.png'); /* Replace with the image for Yushi */
+    background-size: cover;
+}
+
+#riku {
+    top: 50%; /* Adjust the positioning */
+    left: 50%;
+    background-image: url('from-riku-image.png'); /* Replace with the image for Riku */
+    background-size: cover;
+}
+
+/* When the user clicks on the areas, the content section will show */
+.content {
+    display: none;
     padding: 20px;
     margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
-    display: none;
 }
 
 #yushi:target, #riku:target {

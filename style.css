@@ -1,60 +1,65 @@
-/* Resetting default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Background styling */
+/* General Styles for All Pages */
 body {
     font-family: Arial, sans-serif;
-    background: url('fromloves.png') no-repeat center center/cover;
-    height: 100vh;
-    color: white;
     text-align: center;
-}
-
-/* Container for clickable areas */
-.background {
-    position: relative;
-    width: 100%;
+    color: #333;
+    margin: 0;
+    padding: 0;
     height: 100vh;
 }
 
-/* The clickable areas will be positioned as image links */
-.clickable-area {
-    position: absolute;
-    display: block;
-    width: 150px; /* Adjust this width as needed */
-    height: 150px; /* Adjust this height as needed */
-    cursor: pointer;
-    background-color: transparent;
-}
-
-/* Positioning the areas for "From Yushi" and "From Riku" */
-#yushi {
-    top: 20%; /* Adjust the positioning */
-    left: 30%;
-    background-image: url('from-yushi-image.png'); /* Replace with the image for Yushi */
-    background-size: cover;
-}
-
-#riku {
-    top: 50%; /* Adjust the positioning */
-    left: 50%;
-    background-image: url('from-riku-image.png'); /* Replace with the image for Riku */
-    background-size: cover;
-}
-
-/* When the user clicks on the areas, the content section will show */
-.content {
-    display: none;
+.container {
+    margin: 50px auto;
     padding: 20px;
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #dcdcdc;
     border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
-#yushi:target, #riku:target {
-    display: block;
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.show-button {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.show-button.yushi {
+    background-color: #4D9BFF;
+}
+
+.show-button.riku {
+    background-color: #FF4D4D;
+}
+
+.show-button:hover {
+    background-color: #e43e3e;
+}
+
+.show-button.yushi:hover {
+    background-color: #0077ff;
+}
+
+.show-button.riku:hover {
+    background-color: #ff0033;
+}
+
+/* Page Specific Background Image for Homepage */
+body.index-page {
+    background-image: url('images/3.png'); /* Ganti dengan gambar yang sesuai */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }

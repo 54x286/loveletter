@@ -1,69 +1,56 @@
-/* Resetting default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Background styling */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('images/3.png');  /* Background image */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('images/background-main-image.png');
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    color: white;
-    text-align: center;
+    background-attachment: fixed;
 }
 
-/* Container for buttons */
 .container {
-    position: relative;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
-/* Styling for the interactive buttons */
-.button-container {
-    width: 250px;
-    height: 250px;
-    margin: 20px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
+h1 {
+    color: white;
+    font-size: 2em;
+}
+
+.envelope-container {
+    position: relative;
     display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    position: absolute;
-    transition: transform 0.3s;
+    margin: 20px;
 }
 
-.button-container:hover {
-    transform: scale(1.1);
+.envelope {
+    width: 250px;
+    height: auto;
 }
 
-/* Button for Yushi */
-.yushi {
-    background-image: url('images/from-yushi.png');
-    left: 20%;
-}
-
-/* Button for Riku */
-.riku {
-    background-image: url('images/from-riku.png');
-    right: 20%;
-}
-
-/* Text inside the buttons */
-.button-container p {
+.button-from-yushi, .button-from-riku {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    right: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 255, 0.7);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-from-yushi:hover {
+    background-color: rgba(0, 0, 255, 1);
+}
+
+.button-from-riku:hover {
+    background-color: rgba(255, 0, 0, 1);
 }

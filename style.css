@@ -1,50 +1,103 @@
-/* Container for the content */
-.container {
-    position: relative;
-    top: 20%;
-    text-align: left; /* This will align content to the left */
+/* General Styles for All Pages */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
 }
 
-/* Envelope container */
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+/* Envelope Container */
 .envelope-container {
     position: relative;
     display: inline-block;
     margin: 20px;
 }
 
-/* The envelope image */
-.envelope {
-    width: 200px;
+.envelope-container img {
+    width: 200px;  /* Adjust size of the envelope image */
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Buttons */
 .button-from-yushi,
 .button-from-riku {
     position: absolute;
-    top: 50%;
-    left: -50px; /* Move the button more to the left */
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: blue;
     color: white;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 14px;
     cursor: pointer;
-    z-index: 1;
-}
-
-.button-from-yushi {
-    background-color: #0077ff;
 }
 
 .button-from-riku {
-    background-color: #ff0033;
+    background-color: red;
 }
 
-/* Hover effect for buttons */
 .button-from-yushi:hover,
 .button-from-riku:hover {
-    background-color: #005bb5;
+    background-color: darkblue;
+}
+
+.button-from-riku:hover {
+    background-color: darkred;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .envelope-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .button-from-yushi,
+    .button-from-riku {
+        width: 100%;
+        margin-top: 10px;
+        position: relative;
+        transform: none;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* For larger screens like desktop */
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .envelope-container {
+        margin: 0 20px;
+    }
+
+    .button-from-yushi,
+    .button-from-riku {
+        width: auto;
+        margin-top: 10px;
+    }
 }

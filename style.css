@@ -1,65 +1,59 @@
-/* General Styles for All Pages */
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    color: #333;
+/* Resetting default styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background styling */
+body.index-page {
+    font-family: Arial, sans-serif;
+    background: url('images/3.png') no-repeat center center/cover; /* Updated background image */
     height: 100vh;
+    color: white;
+    text-align: center;
 }
 
+/* Container for clickable areas */
 .container {
-    margin: 50px auto;
-    padding: 20px;
-    border: 2px solid #dcdcdc;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 20vh;
 }
 
-.title {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
+/* Button Styles */
 .show-button {
-    padding: 10px 20px;
+    margin: 20px;
+    display: inline-block;
+}
+
+.show-button button {
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 12px;
     background-color: #ff4d4d;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    margin: 10px;
-    position: relative;
-    z-index: 1;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
-.show-button.yushi {
+.show-button.yushi button {
     background-color: #4D9BFF;
 }
 
-.show-button.riku {
+.show-button.riku button {
     background-color: #FF4D4D;
 }
 
-.show-button:hover {
+/* Hover Effects */
+.show-button button:hover {
+    transform: scale(1.1);
     background-color: #e43e3e;
 }
 
-.show-button.yushi:hover {
+.show-button.yushi button:hover {
     background-color: #0077ff;
 }
 
-.show-button.riku:hover {
+.show-button.riku button:hover {
     background-color: #ff0033;
-}
-
-/* Page Specific Background Image for Homepage */
-body.index-page {
-    background-image: url('images/3.png'); /* Ganti dengan gambar yang sesuai */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }

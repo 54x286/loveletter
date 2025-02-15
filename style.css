@@ -1,28 +1,26 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+/* Resetting default styles */
+* {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    background-image: url('images/background-main-image.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    box-sizing: border-box;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+/* Background styling */
+body {
+    font-family: Arial, sans-serif;
+    background: url('images/background-main-image.png') no-repeat center center/cover;
     height: 100vh;
-}
-
-h1 {
     color: white;
-    font-size: 2em;
+    text-align: center;
 }
 
+/* Container for the content */
+.container {
+    position: relative;
+    top: 20%;
+}
+
+/* Envelope container */
 .envelope-container {
     position: relative;
     display: inline-block;
@@ -30,27 +28,35 @@ h1 {
 }
 
 .envelope {
-    width: 250px;
+    width: 200px;
     height: auto;
 }
 
-.button-from-yushi, .button-from-riku {
+.button-from-yushi,
+.button-from-riku {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    background-color: rgba(0, 0, 255, 0.7);
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
+    font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    z-index: 1;
 }
 
-.button-from-yushi:hover {
-    background-color: rgba(0, 0, 255, 1);
+.button-from-yushi {
+    background-color: #0077ff;
 }
 
+.button-from-riku {
+    background-color: #ff0033;
+}
+
+.button-from-yushi:hover,
 .button-from-riku:hover {
-    background-color: rgba(255, 0, 0, 1);
+    background-color: #005bb5;
 }

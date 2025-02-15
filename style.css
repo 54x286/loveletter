@@ -74,7 +74,7 @@ body {
 
 /* Index Page (Choose Love Letter) */
 body.index-page {
-    background-image: url('images/backgrounds.png'); /* Background for homepage */
+    background-image: url('images/fromloves.png'); /* Background for homepage */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

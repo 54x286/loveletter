@@ -2,10 +2,10 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    color: #333;
+    color: #483C32;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 50vh;
 
     /* background in body */
     background-image: url('images/background-main-image.png'); /* Check if the image path is correct */

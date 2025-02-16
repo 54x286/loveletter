@@ -25,7 +25,6 @@ body {
 
 .show-button {
     padding: 10px 20px;
-    background-color: #ff4d4d;
     color: white;
     border: none;
     border-radius: 5px;
@@ -36,26 +35,30 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.show-button.yushi {
+/* Button for From Riku */
+.show-button.riku {
     background-color: #4D9BFF;
 }
 
-.show-button.riku {
+.show-button.riku:hover {
+    background-color: #0077ff;
+}
+
+/* Button for From Yushi */
+.show-button.yushi {
     background-color: #FF4D4D;
 }
 
+.show-button.yushi:hover {
+    background-color: #ff0033;
+}
+
+/* Button Hover Effect */
 .show-button:hover {
     background-color: #e43e3e;
 }
 
-.show-button.yushi:hover {
-    background-color: #0077ff;
-}
-
-.show-button.riku:hover {
-    background-color: #ff0033;
-}
-
+/* Back Button Styles */
 .back-button {
     background-color: #0077ff;
     padding: 10px 20px;
@@ -71,8 +74,6 @@ body {
 }
 
 /* Page Specific Background Images */
-
-/* Index Page (Choose Love Letter) */
 body.index-page {
     background-image: url('images/background-main-image.png'); /* Background for homepage */
     background-size: cover;
@@ -80,7 +81,6 @@ body.index-page {
     background-attachment: fixed;
 }
 
-/* Yushi to Riku Page */
 body.yushi-to-riku {
     background-image: url('images/yushi_to_riku.png'); /* Background for Yushi to Riku page */
     background-size: cover;
@@ -88,7 +88,6 @@ body.yushi-to-riku {
     background-attachment: fixed;
 }
 
-/* Riku to Yushi Page */
 body.riku-to-yushi {
     background-image: url('images/riku_to_yushi.png'); /* Background for Riku to Yushi page */
     background-size: cover;

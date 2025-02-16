@@ -5,14 +5,12 @@ body {
     color: #483C32;
     margin: 0;
     padding: 0;
-    height: 50vh;
-
-    /* background in body */
+    height: 70vh;
     background-image: url('images/background-main-image.png'); /* Check if the image path is correct */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: white;
+    color: brown;
 }
 
 .container {
@@ -68,21 +66,28 @@ h1 {
     background-color: darkred;
 }
 
-/* Media Queries for Responsive Design */
+/* Image Background for Yushi to Riku */
+.image-background.yushi-to-riku {
+    background-image: url('images/yushi_to_riku.png');
+    background-size: cover; /* Ensures the image covers the div */
+    background-position: center; /* Centers the image */
+    height: 300px; /* Set a fixed height */
+    width: 100%; /* Ensures the background takes up the full width */
+}
+
+/* Image Background for Riku to Yushi */
+.image-background.riku-to-yushi {
+    background-image: url('images/riku_to_yushi.png');
+    background-size: cover; /* Ensures the image covers the div */
+    background-position: center; /* Centers the image */
+    height: 300px; /* Set a fixed height */
+    width: 100%; /* Ensures the background takes up the full width */
+}
 
 /* For mobile screens */
 @media (max-width: 768px) {
-    .envelope-container {
-        width: 100%;
-        text-align: center;
-    }
-
-    .button-from-yushi,
-    .button-from-riku {
-        width: 100%;
-        margin-top: 10px;
-        position: relative;
-        transform: none;
+    .image-background {
+        height: 200px; /* Adjust height for mobile */
     }
 
     h1 {
@@ -90,7 +95,7 @@ h1 {
     }
 }
 
-/* For larger screens like desktop */
+/* For desktop screens */
 @media (min-width: 768px) {
     .container {
         display: flex;
@@ -98,35 +103,7 @@ h1 {
         justify-content: center;
     }
 
-    .envelope-container {
-        margin: 0 20px;
+    .image-background {
+        height: 300px; /* Adjust height for desktop */
     }
-
-    .button-from-yushi,
-    .button-from-riku {
-        width: auto;
-        margin-top: 10px;
-    }
-}
-
-/* Image Background for Yushi to Riku */
-.image-background.yushi-to-riku {
-  background-image: url('images/yushi_to_riku.png');
-  background-size: cover; /* Ensures the image covers the div */
-  background-position: center; /* Centers the image */
-  height: 300px; /* You can adjust the height as needed */
-  width: 100%; /* Makes the background cover the full width */
-}
-
-/* Image Background for Riku to Yushi */
-.image-background.riku-to-yushi {
-  background-image: url('images/riku_to_yushi.png');
-  background-size: cover; /* Ensures the image covers the div */
-  background-position: center; /* Centers the image */
-  height: 300px; /* You can adjust the height as needed */
-  width: 100%; /* Makes the background cover the full width */
-}
-
-.back-button {
-  /* Your button styling */
 }

@@ -2,18 +2,24 @@
 body {
     font-family: 'Times New Roman', serif;
     text-align: center;
-    color: #FFFFF0;
+    color: #000000; /* Black text for better contrast */
     margin: 0;
     padding: 0;
     height: 100vh;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Background for Main Page */
+body.index-page {
     background-image: url('images/background-main-image.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Background for Yushi to Riku Page */
@@ -32,14 +38,32 @@ body.riku-to-yushi-page {
     background-attachment: fixed !important;
 }
 
-/* Additional Styles for Container */
+/* Container Styles for aligning elements side by side */
 .container {
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white (sheer) */
+    padding: 30px;
     border-radius: 10px;
     width: 80%;
-    max-width: 600px;
-    margin: 20px;
+    max-width: 800px; /* Set a maximum width for the container */
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+    display: flex;
+    justify-content: space-between; /* Space the envelopes side by side */
+    align-items: center;
+}
+
+/* Envelope Styles - Make the images smaller */
+.envelope {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px; /* Adjust the height to make it smaller */
+    margin: 10px;
+}
+
+/* Letter Styles */
+.letter {
+    color: #000000; /* Black text for better contrast */
+    text-align: left;
 }
 
 h1 {
@@ -53,99 +77,30 @@ p {
     margin-bottom: 15px;
 }
 
-/* Envelope Container */
-.envelope-container {
-    position: relative;
-    display: inline-block;
-    margin: 20px;
-}
-
-.envelope-container img {
-    width: 200px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.button-from-yushi,
-.button-from-riku {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    background-color: blue;
+/* Button Styles */
+.button-from-yushi {
+    background-color: blue; /* Blue button for "To Riku" */
     color: white;
-    border: none;
+}
+
+.button-from-riku {
+    background-color: red; /* Red button for "To Yushi" */
+    color: white;
+}
+
+/* Back Button Styles */
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Blue color */
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s ease;
 }
 
-.button-from-riku {
-    background-color: red;
-}
-
-.button-from-yushi:hover,
-.button-from-riku:hover {
-    background-color: darkblue;
-}
-
-.button-from-riku:hover {
-    background-color: darkred;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
-    .envelope-container img {
-        width: 150px;
-    }
-
-    .button-from-yushi,
-    .button-from-riku {
-        padding: 8px 16px;
-        font-size: 0.9em;
-    }
-}
-
-/* Additional Interactive Elements */
-.letter {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.letter p:last-child {
-    margin-bottom: 0;
-}
-
-/* Footer Styles */
-footer {
-    margin-top: 30px;
-    font-size: 0.9em;
-    color: #ccc;
-}
-
-footer a {
-    color: #ccc;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+.back-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }

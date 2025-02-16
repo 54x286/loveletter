@@ -1,6 +1,6 @@
 /* General Styles for All Pages */
 body {
-    font-family: Times New Roman, sans-serif;
+    font-family: 'Times New Roman', serif;
     text-align: center;
     color: #FFFFF0;
     margin: 0;
@@ -11,6 +11,9 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Background for Yushi to Riku Page */
@@ -29,18 +32,25 @@ body.riku-to-yushi-page {
     background-attachment: fixed !important;
 }
 
-
 /* Additional Styles for Container */
 .container {
-    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     padding: 20px;
+    border-radius: 10px;
     width: 80%;
     max-width: 600px;
+    margin: 20px;
 }
 
 h1 {
-    font-size: 2em;
-    margin-bottom: 30px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 /* Envelope Container */
@@ -69,6 +79,8 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
 .button-from-riku {
@@ -82,4 +94,58 @@ h1 {
 
 .button-from-riku:hover {
     background-color: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .envelope-container img {
+        width: 150px;
+    }
+
+    .button-from-yushi,
+    .button-from-riku {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+/* Additional Interactive Elements */
+.letter {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.letter p:last-child {
+    margin-bottom: 0;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

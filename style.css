@@ -1,19 +1,35 @@
-
 /* General Styles for All Pages */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Times New Roman, sans-serif;
     text-align: center;
     color: #FFFFF0;
     margin: 0;
     padding: 0;
-    height: 70vh;
-    background-image: url('images/background-main-image.png'); /* Check if the image path is correct */
+    height: 100vh;
+    color: white;
+    background-image: url('images/background-main-image.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: white;
 }
 
+/* Background for Yushi to Riku Page */
+body.yushi-to-riku-page {
+    background-image: url('images/yushi_to_riku.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Background for Riku to Yushi Page */
+body.riku-to-yushi-page {
+    background-image: url('images/riku_to_yushi.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Additional Styles for Container */
 .container {
     margin: 50px auto;
     padding: 20px;
@@ -34,7 +50,7 @@ h1 {
 }
 
 .envelope-container img {
-    width: 200px;  /* Adjust size of the envelope image */
+    width: 200px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -65,24 +81,4 @@ h1 {
 
 .button-from-riku:hover {
     background-color: darkred;
-}
-
-/* For mobile screens */
-@media (max-width: 768px) {
-    .image-background {
-        height: 200px; /* Adjust height for mobile */
-    }
-
-    h1 {
-        font-size: 1.5em;
-    }
-}
-
-/* For desktop screens */
-@media (min-width: 768px) {
-    .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
 }

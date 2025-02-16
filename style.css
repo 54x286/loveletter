@@ -1,13 +1,4 @@
-/* Background for Yushi to Riku Page */
 
-body.yushi-to-riku-page {
-    background-image: url('images/yushi_to_riku.png');
-}
-
-/* Background for Riku to Yushi Page */
-body.riku-to-yushi-page {
-    background-image: url('images/riku_to_yushi.png');
-}
 /* General Styles for All Pages */
 body {
     font-family: Arial, sans-serif;

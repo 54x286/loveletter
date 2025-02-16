@@ -15,19 +15,20 @@ body {
 
 /* Background for Yushi to Riku Page */
 body.yushi-to-riku-page {
-    background-image: url('images/yushi_to_riku.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-image: url('images/yushi_to_riku.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
 }
 
 /* Background for Riku to Yushi Page */
 body.riku-to-yushi-page {
-    background-image: url('images/riku_to_yushi.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-image: url('images/riku_to_yushi.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
 }
+
 
 /* Additional Styles for Container */
 .container {
